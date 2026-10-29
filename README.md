@@ -1,4 +1,4 @@
-# 🚀 AI Resume Analyzer Pro
+# 🚀 RAG Based AI Resume Analyzer
 
 An AI-powered ATS Resume Analyzer and Optimization Platform built with **Python and Streamlit**. The application analyzes resumes against job descriptions, identifies skill and keyword gaps, provides ATS-focused insights, rewrites resume content, and generates optimized resumes in PDF and DOCX formats.
 

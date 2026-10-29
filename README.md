@@ -1,101 +1,131 @@
-🚀 AI Resume Analyzer Pro
-An AI-powered ATS Resume Analyzer and Optimization Platform built with Python and Streamlit. The application analyzes resumes against job descriptions, identifies skill and keyword gaps, provides ATS-focused insights, rewrites resume content, and generates optimized resumes in PDF and DOCX formats.
+# 🚀 AI Resume Analyzer Pro
 
-The project is designed as a complete career intelligence platform with authentication, analysis history, ATS deep-dive analytics, resume optimization, and career assistance.
+An AI-powered ATS Resume Analyzer and Optimization Platform built with **Python and Streamlit**. The application analyzes resumes against job descriptions, identifies skill and keyword gaps, provides ATS-focused insights, rewrites resume content, and generates optimized resumes in PDF and DOCX formats.
 
-✨ Key Features
-🎯 ATS Resume Analysis
-Upload PDF/DOCX resumes
-Compare resumes with job descriptions
-Six-dimensional ATS scoring
-Semantic similarity analysis
-Keyword matching
-Skill matching
-Experience analysis
-Education matching
-Resume format analysis
-📊 ATS Deep Dive
-Detailed ATS score breakdown
-Skill-gap identification
-Keyword coverage analysis
-Resume-job matching insights
-Visual score dashboards and charts
-✍️ AI Resume Rewriter
-Rewrite resume bullet points
-Improve action verbs
-Add relevant job keywords
-Improve clarity and impact
-Optimize content for ATS systems
-🚀 Job-Specific Resume Generator
-Tailor resumes according to job descriptions
-Generate optimized resume content
-Export optimized resumes
-Supports PDF and DOCX formats
-🔀 Resume Comparison
-Compare original and optimized content
-Identify improvements
-Review changes made during optimization
-💬 Career & Company Assistant
-Career-related Q&A
-Interview preparation
-Company-related information
-Resume and job-search assistance
-Retrieval-based knowledge system
-🔐 User Authentication
-User signup and login
-Password hashing with bcrypt
-JWT-based authentication
-User-specific analysis history
-📂 Analysis History
-Store previous resume analyses
-Track ATS scores
-Review previous results
-Monitor resume optimization progress
-💾 Database Support
-SQLite by default
-PostgreSQL support through DATABASE_URL
-SQLAlchemy-based database architecture
-🎨 Modern 3D UI
-Interactive Streamlit interface
-Three.js-based visual effects
-Responsive dashboard
-Dark futuristic UI
-Animated cards and visual components
-🛠️ Tech Stack
-Category	Technologies
-Programming Language	Python
-Frontend/UI	Streamlit, HTML, CSS
-Machine Learning	Scikit-learn
-NLP	spaCy, NLTK
-Embeddings	Sentence Transformers
-Vector Search	FAISS
-Data Processing	Pandas, NumPy
-Visualization	Plotly, Matplotlib
-PDF Processing	PyMuPDF, ReportLab, FPDF2
-DOCX Processing	python-docx
-Authentication	JWT, bcrypt
-Database	SQLite, PostgreSQL
-ORM	SQLAlchemy
-Environment Management	python-dotenv
-3D UI	Three.js
-Version Control	Git & GitHub
-🧠 ATS Scoring System
-The analyzer evaluates a resume across multiple dimensions:
+Designed as a career intelligence platform, it combines resume analysis, semantic similarity, skill matching, resume optimization, authentication, analysis history, and career assistance in one application.
 
-Semantic Similarity
-Skill Match
-Keyword Coverage
-Experience Match
-Education Match
-Resume Format
-The system also includes skill synonym handling to recognize variations such as:
+## ✨ Key Features
 
-k8s → Kubernetes
-sklearn → scikit-learn
-nodejs → Node.js
-It uses calibrated scoring, partial skill matching, keyword analysis, and semantic similarity to provide more useful resume-job matching results.
+### 🎯 ATS Resume Analysis
 
-📁 Project Structure
+* Upload resumes in PDF and DOCX formats.
+* Compare resumes against job descriptions.
+* Evaluate resumes across six scoring dimensions.
+* Analyze semantic similarity and keyword coverage.
+* Identify matching and missing skills.
+* Evaluate experience, education, and resume formatting.
+
+### 📊 ATS Deep Dive
+
+* Detailed ATS score breakdown.
+* Skill-gap identification and analysis.
+* Keyword coverage insights.
+* Resume-to-job matching results.
+* Visual dashboards and charts.
+
+### ✍️ AI Resume Rewriter
+
+* Rewrite resume bullet points.
+* Improve action verbs and sentence clarity.
+* Incorporate relevant job-description keywords.
+* Improve the presentation of achievements and responsibilities.
+* Optimize resume content for ATS compatibility.
+
+### 🚀 Job-Specific Resume Generator
+
+* Tailor resume content to specific job descriptions.
+* Generate job-focused resume content.
+* Export optimized resumes in PDF and DOCX formats.
+
+### 🔀 Resume Comparison
+
+* Compare original and optimized resume content.
+* Review changes introduced during optimization.
+* Identify improvements in wording and keyword alignment.
+
+### 💬 Career & Company Assistant
+
+* Career-related question answering.
+* Interview preparation assistance.
+* Company-related information.
+* Resume and job-search guidance.
+* Retrieval-based knowledge support.
+
+### 🔐 User Authentication
+
+* User registration and login.
+* Password hashing using bcrypt.
+* JWT-based authentication.
+* User-specific analysis history.
+
+### 📂 Analysis History
+
+* Store previous resume analyses.
+* Track ATS scores and analysis results.
+* Review previous assessments.
+* Monitor resume optimization progress.
+
+### 💾 Database Support
+
+* SQLite database support by default.
+* PostgreSQL support through `DATABASE_URL`.
+* SQLAlchemy-based database architecture.
+
+### 🎨 Modern 3D User Interface
+
+* Interactive Streamlit interface.
+* Custom HTML and CSS styling.
+* Three.js-based visual effects.
+* Dark futuristic dashboard.
+* Animated cards and visual components.
+
+## 🛠️ Tech Stack
+
+| Category                    | Technologies              |
+| --------------------------- | ------------------------- |
+| Programming Language        | Python                    |
+| Frontend / UI               | Streamlit, HTML, CSS      |
+| Machine Learning            | Scikit-learn              |
+| Natural Language Processing | spaCy, NLTK               |
+| Text Embeddings             | Sentence Transformers     |
+| Vector Search               | FAISS                     |
+| Data Processing             | Pandas, NumPy             |
+| Visualization               | Plotly, Matplotlib        |
+| PDF Processing              | PyMuPDF, ReportLab, FPDF2 |
+| DOCX Processing             | python-docx               |
+| Authentication              | JWT, bcrypt               |
+| Database                    | SQLite, PostgreSQL        |
+| ORM                         | SQLAlchemy                |
+| Environment Configuration   | python-dotenv             |
+| 3D UI Effects               | Three.js                  |
+| Version Control             | Git, GitHub               |
+
+## 🧠 ATS Scoring System
+
+The application evaluates resumes across six dimensions:
+
+1. **Semantic Similarity** — measures the contextual similarity between resume content and the job description.
+2. **Skill Match** — identifies relevant skills present in both the resume and job requirements.
+3. **Keyword Coverage** — evaluates the presence of important job-related keywords.
+4. **Experience Match** — assesses the relevance of the candidate's experience.
+5. **Education Match** — evaluates alignment with educational requirements.
+6. **Resume Format** — examines resume structure and formatting.
+
+### Skill Synonym Handling
+
+The analyzer can recognize variations of common technical terms, such as:
+
+* `k8s` → Kubernetes
+* `sklearn` → scikit-learn
+* `nodejs` → Node.js
+
+Additional analysis techniques include partial skill matching, keyword analysis, semantic similarity, and calibrated scoring.
+
+*ATS scores are application-generated estimates and should not be interpreted as scores from an actual employer's ATS.*
+
+## 📁 Project Structure
+
+```text
 ai-resume-analyzer-pro/
 │
 ├── app.py
@@ -152,41 +182,68 @@ ai-resume-analyzer-pro/
     ├── 8_Rewrite_Assistant.py
     ├── 9_Job_Resume.py
     └── 10_Compare.py
-⚙️ Installation
-1. Clone the repository
-git clone https://github.com/YOUR-USERNAME/ai-resume-analyzer-pro.git
-cd ai-resume-analyzer-pro
-2. Create a virtual environment
-Windows
-py -3.11 -m venv venv
-venv\Scripts\activate
-macOS/Linux
-python3.11 -m venv venv
-source venv/bin/activate
-3. Install dependencies
+```
+
+## ⚙️ Installation and Setup
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/Sananadaf03/RAG-based-AI-Resume-Analyzer.git
+cd RAG-based-AI-Resume-Analyzer
+```
+
+> Ensure that the repository folder and commands match your actual GitHub project structure.
+
+### 2. Create a Virtual Environment
+
+**Windows — PowerShell**
+
+```powershell
+py -3.11 -m venv .venv
+.\.venv\Scripts\Activate.ps1
+```
+
+**macOS / Linux**
+
+```bash
+python3.11 -m venv .venv
+source .venv/bin/activate
+```
+
+### 3. Install Dependencies
+
+```bash
+python -m pip install --upgrade pip
 pip install -r requirements.txt
-Some machine-learning packages such as sentence-transformers, faiss-cpu, and spacy may take additional time to install.
+```
 
-4. Configure environment variables
-Create a .env file based on:
+Some machine-learning dependencies, including Sentence Transformers, FAISS, and spaCy, may require additional installation time.
 
-.env.example
-SQLite is used by default, so no database configuration is required for basic local usage.
+### 4. Configure Environment Variables
 
-5. Run the application
+Create a `.env` file using `.env.example` as a reference.
+
+Add only the configuration values required by your application. Do not commit real API keys, passwords, or database credentials to GitHub.
+
+SQLite is configured as the default database according to the project setup. PostgreSQL can be configured using `DATABASE_URL` if supported by your environment.
+
+### 5. Run the Application
+
+```bash
 streamlit run app.py
-The application will be available at:
+```
 
+Open the local URL displayed in the terminal, usually:
+
+```text
 http://localhost:8501
-🖥️ Windows Quick Start
-The project includes:
+```
 
-run.bat
-You can also start the application from PowerShell:
+## 🔄 Application Workflow
 
-streamlit run app.py
-🔄 Application Workflow
-User Signup/Login
+```text
+User Signup / Login
         ↓
 Upload Resume
         ↓
@@ -196,78 +253,90 @@ Resume Parsing
         ↓
 ATS Analysis
         ↓
-┌─────────────────────────────┐
-│ Semantic Similarity         │
-│ Skill Matching              │
-│ Keyword Analysis            │
-│ Experience Analysis         │
-│ Education Analysis          │
-│ Format Analysis             │
-└─────────────────────────────┘
+┌───────────────────────────┐
+│ Semantic Similarity       │
+│ Skill Matching            │
+│ Keyword Analysis          │
+│ Experience Analysis       │
+│ Education Analysis        │
+│ Format Analysis           │
+└───────────────────────────┘
         ↓
-ATS Score & Skill Gaps
+ATS Score and Skill Gaps
         ↓
 Resume Optimization
         ↓
-AI Resume Rewriting
+Resume Rewriting
         ↓
 Job-Specific Resume
         ↓
 PDF / DOCX Export
-📊 Main Application Pages
-Page	Purpose
-Login	Secure user authentication
-Signup	Create a user account
-Dashboard	Resume analysis overview
-Analyze	Analyze resume against a job description
-History	View previous analyses
-ATS Deep Dive	Detailed ATS and skill analysis
-Rewrite Assistant	Improve resume bullet points
-Job Resume	Generate job-specific resumes
-Compare	Compare original and optimized resumes
-🔒 Privacy
-The project is designed with a local-first approach.
+```
 
-Core resume analysis can be performed locally without requiring paid external AI APIs.
+## 📊 Main Application Pages
 
-User authentication and analysis data can be stored using the configured local database.
+| Page              | Purpose                                 |
+| ----------------- | --------------------------------------- |
+| Login             | Secure user authentication              |
+| Signup            | Create a user account                   |
+| Dashboard         | View resume analysis overview           |
+| Analyze           | Compare a resume with a job description |
+| History           | Review previous analyses                |
+| ATS Deep Dive     | Explore detailed ATS and skill insights |
+| Rewrite Assistant | Improve resume bullet points            |
+| Job Resume        | Generate job-specific resume content    |
+| Compare           | Compare original and optimized content  |
 
-Do not commit real credentials, API keys, passwords, database credentials, uploaded resumes, or private user data to GitHub.
+## 🔒 Privacy and Security
 
-📌 Future Improvements
- Cloud deployment
- Additional resume templates
- More job-category intelligence
- Advanced semantic search
- LinkedIn profile analysis
- Automated job-description extraction
- Resume version management
- More company knowledge bases
- Improved mobile responsiveness
-🎓 Project Highlights
-This project demonstrates practical experience with:
+* Core resume analysis is designed to run locally without requiring paid external AI APIs.
+* User authentication and analysis data can be stored using the configured database.
+* Passwords should be stored using secure hashing rather than plain text.
+* Never commit private resumes, personal user data, credentials, or secret keys to a public repository.
+* Review any external AI integrations before sending resume content to third-party services.
 
-Python application development
-Machine Learning
-Natural Language Processing
-Semantic similarity
-Vector search
-Retrieval-Augmented Generation concepts
-Resume parsing
-ATS optimization
-Data visualization
-Streamlit application development
-Authentication and authorization
-Database management
-PDF/DOCX generation
-Modular software architecture
-Git/GitHub project management
-👩‍💻 Author
-Sana Nadaf
+## 🚀 Future Improvements
+
+* Cloud deployment.
+* Additional resume templates.
+* Expanded job-category intelligence.
+* Advanced semantic search.
+* LinkedIn profile analysis.
+* Automated job-description extraction.
+* Resume version management.
+* Expanded company knowledge bases.
+* Improved mobile responsiveness.
+
+## 🎓 Project Highlights
+
+This project demonstrates practical implementation of:
+
+* Python application development.
+* Machine learning and natural language processing.
+* Semantic similarity and text embeddings.
+* Vector search using FAISS.
+* Retrieval-based question answering concepts.
+* Resume parsing and ATS optimization.
+* Data visualization.
+* Streamlit application development.
+* Authentication and authorization.
+* Database management.
+* PDF and DOCX generation.
+* Modular software architecture.
+* Git and GitHub workflows.
+
+## 👩‍💻 Author
+
+**Sana Nadaf**
 
 B.E. Computer Science & Engineering
 
-GitHub: github.com/Sananadaf03
+GitHub: [Sananadaf03](https://github.com/Sananadaf03)
 
-⭐ If you find this project useful
-Consider giving the repository a ⭐ on GitHub.
+## ⭐ Support
+
+If you find this project useful, consider giving the repository a star on GitHub.
+
+---
+
+*Built to help job seekers understand resume-job alignment and improve their resumes through structured analysis and optimization.*
